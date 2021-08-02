@@ -199,8 +199,17 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+card = intel_backlight
+use-actual-brightness = true
+format = <label> <ramp>
+label = %percentage%
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+;enable scroll = true
 
 bar-width = 10
 bar-indicator = |
